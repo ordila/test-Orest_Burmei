@@ -45,40 +45,98 @@
       ]
     },
     {
-      "id": "9d85",
+      "id": "3",
       "imageUrl": "https://via.placeholder.com/150",
-      "name": "Ірина Козак",
-      "count": "12",
+      "name": "Smart Watch",
+      "count": 3,
       "size": {
-        "width": "0віаіа",
-        "height": "sdfsdf0"
+        "width": 10,
+        "height": 10
       },
-      "weight": "234442432",
-      "comments": []
+      "weight": "50g",
+      "comments": [
+        {
+          "id": 6,
+          "productId": 3,
+          "description": "Great battery life!",
+          "date": "14:00 22.08.2021"
+        }
+      ]
     },
     {
-      "id": "994c",
+      "id": "4",
       "imageUrl": "https://via.placeholder.com/150",
-      "name": "sdfds",
-      "count": "fsdfsd",
+      "name": "Ergonomic Keyboard",
+      "count": 7,
       "size": {
-        "width": "fsdf",
-        "height": "fsd"
+        "width": 45,
+        "height": 20
       },
-      "weight": "sdfsdf",
-      "comments": []
+      "weight": "800g",
+      "comments": [
+        {
+          "id": 7,
+          "productId": 4,
+          "description": "Keys feel great and reduce wrist pain.",
+          "date": "09:00 03.09.2023"
+        },
+        {
+          "id": 8,
+          "productId": 4,
+          "description": "Very durable and long-lasting.",
+          "date": "16:45 11.11.2023"
+        }
+      ]
     },
     {
-      "id": "58c8",
+      "id": "5",
       "imageUrl": "https://via.placeholder.com/150",
-      "name": "sdfsd",
-      "count": "fsdfdsf",
+      "name": "Bluetooth Speaker",
+      "count": 15,
       "size": {
-        "width": "sdfsdf",
-        "height": "dsfds"
+        "width": 30,
+        "height": 10
       },
-      "weight": "fdsfsdf",
-      "comments": []
+      "weight": "600g",
+      "comments": [
+        {
+          "id": 9,
+          "productId": 5,
+          "description": "Amazing sound clarity and bass.",
+          "date": "20:00 05.07.2022"
+        },
+        {
+          "id": 10,
+          "productId": 5,
+          "description": "Battery lasts all day on a single charge.",
+          "date": "08:30 23.08.2022"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "imageUrl": "https://via.placeholder.com/150",
+      "name": "Portable Charger",
+      "count": 20,
+      "size": {
+        "width": 5,
+        "height": 10
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 11,
+          "productId": 6,
+          "description": "Charges my phone multiple times.",
+          "date": "13:20 17.03.2023"
+        },
+        {
+          "id": 12,
+          "productId": 6,
+          "description": "Compact and easy to carry.",
+          "date": "11:50 29.04.2023"
+        }
+      ]
     }
   ]
 }

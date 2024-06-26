@@ -55,3 +55,11 @@ body {
 .active {
   color: rgb(226, 186, 71);
 }
+button {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  &:hover {
+    background-color: #0056b3;
+  }
+}
