@@ -9,6 +9,7 @@ import { useAppDispatch } from "@/hooks";
 import { deleteProductAsync, editProductAsync } from "@/redux/thunk";
 
 import { Modal, ProductForm } from "..";
+import { Link } from "react-router-dom";
 
 interface IProductCard {
   product: Product;
@@ -24,7 +25,9 @@ export const ProductCard: FC<IProductCard> = ({ product }) => {
 
   const { id, imageUrl, name, count, size, weight } = product;
 
-  const toggleModal = () => setIsModalVisible(!isModalVisible);
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
   const toggleEditModal = () => setIsEditModalVisible(!isEditModalVisible);
 
   const handleConfirmDelete = () => {
@@ -59,7 +62,9 @@ export const ProductCard: FC<IProductCard> = ({ product }) => {
     <div className="product-card">
       <img src={imageUrl} alt={name} className="product-image" />
       <div className="product-info">
-        <h3 className="product-name">{name}</h3>
+        <h3 className="product-name">
+          <Link to={`/product/${id}`}>{name}</Link>
+        </h3>
         <p className="product-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           faucibus, lorem eget semper tincidunt, lectus nulla hendrerit arcu, et

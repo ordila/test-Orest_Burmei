@@ -75,3 +75,20 @@ export const deleteProductAsync = createAsyncThunk(
     }
   }
 );
+
+export const fetchProductByIdAsync = createAsyncThunk(
+  "products/fetchProductById",
+  async (productId: string | number, { rejectWithValue }) => {
+    try {
+      const response = await fetch(
+        `http://localhost:3000/products/${productId}`
+      );
+      if (!response.ok) throw new Error("Network response was not ok");
+      const product = await response.json();
+      return product;
+    } catch (error) {
+      if (error instanceof Error)
+        return rejectWithValue("An unknown error occurred");
+    }
+  }
+);

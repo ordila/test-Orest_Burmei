@@ -3,3 +3,14 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+
+.addNewItem {
+  height: 50px;
+  width: 300px;
+  background-color: #007bff;
+  color: white;
+  &:hover {
+    background-color: #0056b3;
+  }
+  margin-bottom: 20px;
+}

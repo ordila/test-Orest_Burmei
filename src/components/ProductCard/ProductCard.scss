@@ -4,6 +4,14 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  button {
+    background-color: #007bff;
+    color: white;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
 }
 
 .product-image {
@@ -19,6 +27,9 @@
 .product-name {
   font-size: 18px;
   margin-bottom: 10px;
+  &:hover {
+    color: #007bff;
+  }
 }
 
 .product-description {

@@ -3,6 +3,7 @@ import {
   addProductAsync,
   deleteProductAsync,
   editProductAsync,
+  fetchProductByIdAsync,
   fetchProducts,
 } from "./thunk";
 import { Product, ProductToAdd } from "@/types/product/product";
@@ -12,6 +13,24 @@ const productsSlice = createSlice({
   initialState: {
     items: [],
     status: "idle",
+    item: {
+      id: "",
+      name: "",
+      imageUrl: "",
+      description: "",
+      size: {
+        width: 0,
+        height: 0,
+      },
+      weight: 0,
+      comments: [
+        {
+          id: "",
+          date: "",
+          description: "",
+        },
+      ],
+    },
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -64,6 +83,17 @@ const productsSlice = createSlice({
         }
       })
       .addCase(editProductAsync.rejected, (state) => {
+        state.status = "failed";
+      })
+
+      .addCase(fetchProductByIdAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchProductByIdAsync.fulfilled, (state, action) => {
+        state.item = action.payload;
+        state.status = "succeeded";
+      })
+      .addCase(fetchProductByIdAsync.rejected, (state) => {
         state.status = "failed";
       });
   },

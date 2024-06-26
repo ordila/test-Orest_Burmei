@@ -52,24 +52,28 @@ export const ProductCardGrid = () => {
   };
 
   return (
-    <ul className="product-card-grid">
-      {items.map((product: Product) => (
-        <li key={product.id}>
-          <ProductCard product={product} />
-        </li>
-      ))}
+    <>
+      <ul className="product-card-grid">
+        {items.map((product: Product) => (
+          <li key={product.id}>
+            <ProductCard product={product} />
+          </li>
+        ))}
 
-      <button onClick={toggleModal}>Add Product</button>
-      {isModalVisible && (
-        <Modal onClose={toggleModal}>
-          <ProductForm
-            product={newProduct}
-            handleInputChange={handleInputChange}
-            toggleModal={toggleModal}
-            handleSubmit={handleConfirm}
-          />
-        </Modal>
-      )}
-    </ul>
+        {isModalVisible && (
+          <Modal onClose={toggleModal}>
+            <ProductForm
+              product={newProduct}
+              handleInputChange={handleInputChange}
+              toggleModal={toggleModal}
+              handleSubmit={handleConfirm}
+            />
+          </Modal>
+        )}
+      </ul>
+      <button className="addNewItem" onClick={toggleModal}>
+        Add Product
+      </button>
+    </>
   );
 };
