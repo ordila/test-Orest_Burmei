@@ -1,0 +1,23 @@
+.navigation_wrapper {
+  height: 50px;
+
+  font-size: 20px;
+  font-weight: 600;
+  
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  background-color: RGB(80, 47, 157);
+}
+
+.link {
+  &:hover {
+    scale: 1.2;
+
+    transition: all 0.3s linear;
+  }
+}
